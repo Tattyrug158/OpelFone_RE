@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\css.css">
+    <title>OpelFone</title>
+        <link rel="icon" href="sources/Logo.ico">
+
+</head>
+<body>
+    <div class="contenedorA">
+        <H1 class="marcaA">OpelFone Administrator</H1>
+    </div>
+
+    <form action="../../BackEnd/Administrador/validar_admin.php" method="POST">
+    <div class="contenedorA">
+        <h1 class="tituloA">Inicia Sesión</h1>
+        <hr class="lineA">
+        <div>
+            <label class="labelA">Email del Administrador</label><br>
+            <input class="textoA" type="email" name="email" required><br>
+            
+            <label class="labelA">Contraseña</label><br>
+            <input class="textoA" type="password" name="password" required><br>
+            
+            <button class="botonA" type="submit" name="ingresar">Iniciar Sesión</button>
+        </div>
+    </div>
+</form>
+
+
+</body>
+</html>

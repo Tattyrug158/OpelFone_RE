@@ -1,0 +1,443 @@
+/* Importación de fuente amigable y limpia */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #5d4037;
+}
+
+/* --- BANNER SUPERIOR DE NAVEGACIÓN --- */
+.nab_div {
+    background-color: #fca38d; /* Tono salmón de las imágenes */
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 35px;
+    height: 35px;
+    background-color: #ffffff;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.13 19.64 10.51 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z'/%3E%3C/svg%3E") no-repeat center;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.13 19.64 10.51 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z'/%3E%3C/svg%3E") no-repeat center;
+}
+
+.nab_div h1 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+/* Botón de Usuario */
+.user {
+    background-color: #f7ede2;
+    border: 2px solid #5d4037;
+    color: #5d4037;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.user::after {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-color: #5d4037;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5-4-8-4z'/%3E%3C/svg%3E") no-repeat center;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5-4-8-4z'/%3E%3C/svg%3E") no-repeat center;
+}
+
+/* --- MENÚ DE NAVEGACIÓN (TABS) --- */
+nav {
+    background-color: #fca38d;
+    padding: 0 40px;
+}
+
+.navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 5px;
+}
+
+.navbar li a {
+    display: block;
+    padding: 10px 30px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.navbar li.navbarselected a {
+    background-color: #ffffff;
+    color: #fca38d;
+    font-weight: 500;
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+.contenido {
+    padding: 40px;
+}
+
+.contenido h2 {
+    color: #5d4037;
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+/* --- CONTENEDORES Y TARJETAS (PANEL INICIO) --- */
+.cards-container {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background-color: #fce1da; /* Fondo rosa pastel */
+    border-radius: 18px;
+    padding: 15px 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 110px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #5d4037;
+    text-align: center;
+    font-weight: 400;
+}
+
+.card-data-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.card-icon {
+    width: 35px;
+    height: 35px;
+    background-color: #5d4037;
+}
+
+.card-icon.usuarios-icon {
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 3-1.34 3-3S9.66 5 8 5C6.34 5 5 1.34 5 3s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z'/%3E%3C/svg%3E") no-repeat center;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 3-1.34 3-3S9.66 5 8 5C6.34 5 5 1.34 5 3s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z'/%3E%3C/svg%3E") no-repeat center;
+}
+
+.card-icon.telefonos-icon {
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z'/%3E%3C/svg%3E") no-repeat center;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z'/%3E%3C/svg%3E") no-repeat center;
+}
+
+.card p.card-value {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0;
+    color: #5d4037;
+    text-align: center;
+}
+
+/* Barra Estilo "Estable" */
+.progress-estable {
+    width: 100%;
+    height: 24px;
+    background-color: #fffaf8;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: auto 0;
+}
+
+.progress-bar-estable {
+    height: 100%;
+    background-color: #8cb892; /* Verde suave de la imagen 2 */
+    border-radius: 12px;
+}
+
+/* --- DISEÑO INFERIOR DE DOS COLUMNAS --- */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.sidebar-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-sidebar {
+    background-color: #fce1da;
+    border: 1.5px solid #5d4037;
+    color: #5d4037;
+    padding: 15px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.btn-sidebar:hover {
+    background-color: #fca38d;
+    color: white;
+}
+
+/* --- ELEMENTOS DE LA PÁGINA DE SISTEMA --- */
+.sistema-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.sistema-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.sistema-label {
+    width: 320px;
+    font-size: 16px;
+    color: #5d4037;
+    font-weight: 500;
+}
+
+.progress-sistema-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.progress-sistema {
+    width: 100%;
+    height: 22px;
+    background-color: #e3f2fd;
+    border-radius: 11px;
+}
+
+.progress-bar-sistema {
+    height: 100%;
+    border-radius: 11px;
+}
+
+/* Colores de barra de sistema basados en Screenshot_20260622-080818.png */
+.bar-azul { background-color: #4d82f3; }
+.bar-azul-fuerte { background-color: #2962ff; }
+
+.sistema-percentage {
+    font-size: 24px;
+    font-weight: 500;
+    width: 60px;
+    text-align: right;
+}
+
+/* --- GRÁFICOS SVG --- */
+.chart-wrapper {
+    background-color: transparent;
+    padding: 10px;
+}
+
+.chart-legends {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.legend-color {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 20px; /* 🔹 Espacio entre el borde del navegador y el contenido */
+    background-color: #fff8f6;
+    color: #333;
+}
+
+.contenido {
+    padding: 30px; /* 🔹 Espacio interno entre el contenido y los bordes del contenedor */
+}
+
+.nab_div, .nab_div2 {
+    border-radius: 10px; /* 🔹 Bordes suaves */
+    margin-bottom: 15px; /* 🔹 Espacio entre el encabezado y el contenido */
+}
+
+.cards-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 10px; /* 🔹 Espacio interno entre las tarjetas y el borde del contenedor */
+}
+
+.card {
+    background-color: #ffe5e0;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 10px; /* 🔹 Espacio entre tarjetas */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1;
+}
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background-color: #fff8f6;
+    color: #333;
+}
+
+.nab_div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f28b82;
+    color: white;
+    padding: 10px 20px;
+}
+
+.nab_div h1 {
+    font-weight: 600;
+}
+
+.user {
+    background-color: #fdd1c7;
+    color: #333;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nab_div2 {
+    background-color: #ffe5e0;
+    padding: 10px;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.navbarselected a {
+    background-color: #f28b82;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.contenido {
+    padding: 20px;
+}
+
+/* Tarjetas */
+.card {
+    background-color: #ffe5e0;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.cards-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* Botones laterales */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.sidebar button {
+    background-color: #fdd1c7;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Barras de progreso */
+.progress {
+    height: 15px;
+    background-color: #d3d3d3;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #8bc34a;
+}
+
+/* Gráficos simulados */
+.chart {
+    background: linear-gradient(to top, #fdd1c7 30%, #f28b82 70%);
+    height: 200px;
+    border-radius: 10px;
+    margin-top: 20px;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\css.css">
+    <title>OpelFone</title>
+        <link rel="icon" href="sources/Logo.ico">
+
+</head>
+<body>
+    <div class="contenedor">
+        <H1 class="marca">OpelFone</H1>
+    </div>
+
+    <div class="contenedor">
+        <h1 class="titulo">Registrate</h1>
+        <hr class="line">
+        <h2 style="font-family: Comfortaa; color: #94b889; font-weight: lighter; font-size: 45px;"> Información personal</h2>
+        
+        
+        
+        <form method="POST" id="registroForm">
+        <div class="contenedor2" >
+            <div>
+            <label class="label">Nombre</label><br>
+            <input class="texto" type="text" name="nombre" required><br>
+            
+            <label class="label">Apellidos</label><br>
+            <input class="texto" type="text" name="apellidos" required><br>
+
+            <label class="label" id="direccion">Dirección</label><br>
+            <input class="texto" name="domicilio" type="text"><br>
+            </div>
+            <div>
+            <label class="label" id="correo">E-mail</label><br>
+            <input class="texto" name="email" type="text"><br>
+            
+            <label class="label" id="Contraseña">Contraseña</label><br>
+            <input class="texto" name="password" type="password"><br>
+
+            </div>
+            <div></div>
+            <div></div>
+            <div class="contenedor3">
+                <button class="boton2" type="submit" id="">></button>
+                <h1 class="titulo">Registrar y Continuar</h1>
+            </div>
+        </div>
+        </form>
+    </div>
+
+    <dialog id="miVentana" class="contenedor dialog">
+    <h1 class="sub_int">Se registrarón los datos</h2>
+        <h3 class="sub">Ya formas parte de Opelfone, inicia sesión para continuar</h3>
+    <a href="Inicio_sesión_usuario.html"><button class="boton">Aceptar</button></a>
+</dialog>
+
+<div style="width: 100%; justify-content: center; align-items: center; text-align: center;">
+        <a href="Inicio_sesión_usuario.html"><h1 class="sub" style="font-family: comfortaa;">Inicia sesion</h1></a>
+    </div> 
+
+
+<script>
+    const form = document.getElementById('registroForm');
+    const modal = document.getElementById('miVentana');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        fetch('../../BackEnd/Sesion/registrar.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            if (data.trim() === "exito") {
+                modal.showModal(); 
+            } else {
+                alert("Error del servidor: " + data);
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    });
+</script>
+</body>
+</html>

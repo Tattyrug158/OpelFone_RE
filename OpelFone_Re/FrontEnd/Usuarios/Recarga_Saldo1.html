@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\css.css">
+    <title>OpelFone</title>
+</head>
+<body>
+    <div class="nab_div">
+        <div><h1> OpelFone</h1></div>
+        <div><button class="user">OswaldoHdz</button></div>
+    </div>
+    <nav>
+            <div class="nab_div2">
+                <ul class="navbar">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Mi_Linea.html">Mi Linea</a></li>
+                <li class="navbarselected"><a href="Recarga_Saldo.html">Recarga de Saldo</a></li>
+                <li><a href="Mi_Saldo.html">Mi Saldo</a></li>
+            </ul>
+            </div>
+        </nav>
+
+
+
+        <div style="padding: 35px;">
+            <div class="flex">
+                <div>
+                    <h1 class="sub_int">Recargar Saldo</h1>
+                </div>
+                <div><h1 class="sub">saldo actual: $145.00</h1></div>
+            </div>
+
+            <button class="estado3">Realizar recarga adicional</button>
+
+            <div class="flex">
+                <div>
+                    <h1 class="sub_int">Recargar Créditos</h1>
+                </div>
+                <div><h1 class="sub">Créditos Disponibles: 596</h1></div>
+            </div>
+
+            <div class="flex2">
+                <div class="tarjeta flex2">
+                    <div><h1 class="tartext">$10</h1><h1 class="tartextsub">45 Créditos</h1></div>
+                    <div><button class="tarboton" data-titulo="p1" data-texto="$10">¡Lo quiero!</button></div>
+                </div>
+                <div class="tarjeta flex2">
+                    <div><h1 class="tartext">$15</h1><h1 class="tartextsub">60 Créditos</h1></div>
+                    <div><button data-titulo="p1" data-texto="$15" class="tarboton">¡Lo quiero!</button></div>
+                </div>
+                <div class="tarjeta flex2">
+                    <div><h1 class="tartext">$30</h1><h1 class="tartextsub">130 Créditos</h1></div>
+                    <div><button data-titulo="p1" data-texto="$30" class="tarboton">¡Lo quiero!</button></div>
+                </div>
+            </div>
+            <div class="flex2">
+                <div class="tarjeta flex2">
+                    <div><h1 class="tartext">$50</h1><h1 class="tartextsub">200 Créditos</h1></div>
+                    <div><button data-titulo="p1" data-texto="$50" class="tarboton">¡Lo quiero!</button></div>
+                </div>
+                <div class="tarjeta flex2">
+                    <div><h1 class="tartext">$75</h1><h1 class="tartextsub">350 Créditos</h1></div>
+                    <div><button data-titulo="p1" data-texto="$75" class="tarboton">¡Lo quiero!</button></div>
+                </div>
+                <div class="tarjeta flex2">
+                    <div><h1 class="tartext">$85</h1><h1 class="tartextsub">450 Créditos</h1></div>
+                    <div><button data-titulo="p1" data-texto="$65" class="tarboton">¡Lo quiero!</button></div>
+                </div>
+            </div>
+            <div class="flex2">
+                <div class="tarjeta flex2">
+                    <div><h1 class="tartext">$100</h1><h1 class="tartextsub">600 Créditos</h1></div>
+                    <div><button data-titulo="p1" data-texto="$100" class="tarboton">¡Lo quiero!</button></div>
+                </div>
+                <div class="tarjeta flex2">
+                    <div><h1 class="tartext">$150</h1><h1 class="tartextsub">850 Créditos</h1></div>
+                    <div><button data-titulo="p1" data-texto="$150" class="tarboton">¡Lo quiero!</button></div>
+                </div>
+                <div class="tarjeta flex2">
+                    <div><h1 class="tartext">$200</h1><h1 class="tartextsub">1000 Créditos</h1></div>
+                    <div><button data-titulo="p1" data-texto="$200" class="tarboton">¡Lo quiero!</button></div>
+                </div>
+            </div>
+
+
+            <div></div>
+        </div>
+
+
+    <dialog id="modal" class="modal">
+        <h1 class="sub_int" style="justify-content: left;">Comprar paquete: <span id="textoModal"></span></h1><br>
+        <div class="flex">
+            <div style="border-right: black solid; width: 50%;">
+                <h3 class="sub">Recargar a:</h3>
+                <input type="text" name="" id="telefono" class="texto"><br>
+                <button class="boton" onclick="agregarTelefono()">Guardar número de telefono</button><br><br><br><br>
+                <h1 class="sub_int">Total: </h1>
+                <span id="total" class="sub">$900</span>
+            </div>
+            <div style="width: 100%;" >
+                <h1 class="sub_int" >Mis telefonos</h1>
+                <div id="lista" ></div>
+                <button class="botoneli">Borrar telefono</button>
+            </div>
+        </div>
+
+        
+        <button class="botoncan" id="cerrar">Cancelar Acción</button>
+    </dialog>
+        
+    <script>
+        
+
+
+         function agregarTelefono() {
+            let telefono = document.getElementById("telefono").value;
+
+            if (telefono.trim() !== "") {
+                // Crear botón
+                let boton = document.createElement("button");
+
+                // Texto del botón
+                boton.textContent = telefono;
+                boton.classList.add("telefono-btn");
+
+                // Salto de línea después del botón
+                document.getElementById("lista").appendChild(boton);
+                document.getElementById("lista").appendChild(document.createElement("br"));
+
+                // Limpiar campo
+                document.getElementById("telefono").value = "";
+            }
+        }
+
+
+
+        const modal = document.getElementById("modal");
+        const textoModal = document.getElementById("textoModal");
+
+        document.querySelectorAll(".tarboton").forEach(boton => {
+
+            boton.addEventListener("click", () => {
+
+                textoModal.textContent = boton.dataset.texto;
+
+                modal.showModal();
+            });
+
+        });
+
+        document.getElementById("cerrar").addEventListener("click", () => {
+            modal.close();
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

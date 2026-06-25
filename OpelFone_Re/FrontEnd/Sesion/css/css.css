@@ -1,0 +1,215 @@
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('../Font/Font2.ttf') format('truetype');
+}
+
+.contenedor{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.marca{
+    justify-content: center;
+    align-items: center;
+    color: #94b889;
+    font-family: Comfortaa;
+    font-size: 100px;
+}
+
+.titulo{
+    font-size: 40px;
+font-family: Comfortaa;    color: #62715e;
+}
+
+.line{
+    background-color: #62715e;
+    border: none;
+    height: 8px;
+    width: 50%;
+    margin-bottom: 25px;
+    border-radius: 50px;
+}
+.label{
+font-family: Comfortaa;    color: #62715e;
+    font-size: 25px;
+}
+.texto{
+    width: 500px;
+    margin: 20px;
+    border-radius: 20px;
+    border-style:solid;
+    border-width: 2px;
+    border-color: #94b889;
+    font-size: 25px;
+    text-align: center;
+    font-family: Comfortaa;
+    color: #94b889;
+}
+.boton{
+    background-color: #94b889;
+    padding: 15px;
+    width: 400px;
+    color: #fffbf1;
+    border-radius: 50px;
+    font-size: 30px;
+    box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.289);
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    font-family: Comfortaa;
+}
+.boton:hover{
+    background-color: #778b71;
+}
+
+
+
+.contenedor2{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.contenedor3{
+    justify-content: center;
+    align-items: center;
+}
+.boton2{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #fffbf1;
+    border-width: 5px;
+    border-color: #62715e;
+    border-style: solid;
+    font-family: Comfortaa;
+    color: #62715e;
+    font-size: 60px;
+    transition: 0.1s;
+}
+.boton2:hover{
+    background-color: #778b71;
+}
+
+
+
+
+
+
+
+
+.contenedorA{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.marcaA{
+    justify-content: center;
+    align-items: center;
+    color: #f99c8c;
+    font-family: Comfortaa;
+    font-size: 100px;
+}
+
+.tituloA{
+    font-size: 40px;
+font-family: Comfortaa;    color: #f99c8c;
+}
+
+.lineA{
+    background-color: #f99c8c;
+    border: none;
+    height: 8px;
+    width: 50%;
+    margin-bottom: 25px;
+    border-radius: 50px;
+}
+.labelA{
+font-family: Comfortaa;    color: #f99c8c;
+    font-size: 25px;
+}
+.textoA{
+    width: 500px;
+    margin: 20px;
+    border-radius: 20px;
+    border-style:solid;
+    border-width: 2px;
+    border-color: #f99c8c;
+    font-size: 25px;
+    text-align: center;
+    font-family: Comfortaa;
+    color: #f99c8c;
+}
+.botonA{
+    background-color: #f99c8c;
+    padding: 15px;
+    width: 400px;
+    color: #fffbf1;
+    border-radius: 50px;
+    font-size: 30px;
+    box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.289);
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    font-family: Comfortaa;
+}
+.botonA:hover{
+    background-color: #bd796e;
+}
+
+.sub_int{
+    font-size: 40px;
+    color: #62715e;
+    font-family:Comfortaa;
+}
+.sub{
+    font-size: 40px;
+    color: #62715e;
+    font-family:Comfortaa;
+    font-weight: lighter
+}
+.inter{
+    font-size: 40px;
+    color: #62715e;
+
+}
+
+
+dialog {
+    width: min(90%, 500px);
+    border: none;
+    border-radius: 20px;
+    padding: 25px;
+    background: #ffffff;
+    color: #62715e;
+    box-shadow: 0 10px 30px rgba(0,0,0,.5);
+    font-family: Comfortaa;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+dialog {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.3s ease, transform 0.3s ease, overlay 0.3s ease allow-discrete;
+}
+
+dialog[open] {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Animación de salida */
+@starting-style {
+  dialog[open] {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+

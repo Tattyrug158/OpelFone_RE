@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\css.css">
+    <title>OpelFone</title>
+        <link rel="icon" href="sources/Logo.ico">
+
+</head>
+<body>
+    <div class="contenedor">
+        <H1 class="marca">OpelFone</H1>
+    </div>
+
+
+
+
+    
+    <div class="contenedor">
+        <h1 class="titulo">Registrate</h1>
+        <hr class="line">
+        <h2 style="font-family: Comfortaa; color: #94b889; font-weight: lighter; font-size: 45px;"> Información personal</h2>
+        
+        
+        <form id="pagoForm">
+        <div class="contenedor2" >
+            <div>
+            <label class="label" id="nombre_titular" >Nombre del titular</label><br>
+            <input class="texto" type="text" name="titular"><br>
+            
+            <label class="label" id="num_tarjeta">Numero de Tarjeta</label><br>
+            <input class="texto"  type="number" name="numero"><br>
+
+            </div>
+            <div>
+            <label class="label" id="cvv">CVV</label><br>
+            <input class="texto" type="number" name="cvv"><br>
+            
+            <label class="label" id="fecha">Fecha de vencimiento</label><br>
+            <input class="texto" type="date" name="fecha" required><br>
+
+            </div>
+            <div></div>
+            <div></div>
+            <div class="contenedor3">
+                <button class="boton2" id="abrirModal" type="submit">></button>
+                <h1 class="titulo">Guardar</h1>
+                <button class="boton2">!</button>
+                <h1 class="titulo">Omitir</h1>
+            </div>
+        </div>
+        </form>
+    </div>
+
+
+
+
+    <dialog id="miVentana" class="contenedor dialog">
+    <h1 class="sub_int">Se agregaron los metodos de pago</h2>
+    <a href="../Users/html/index.html"><button class="boton">Aceptar</button></a>
+</dialog>
+
+
+<script>
+    const form = document.getElementById('pagoForm');
+    const ventana = document.getElementById('miVentana');
+
+    // 1. Escuchar el envío del formulario
+    form.addEventListener('submit', function(e) {
+        e.preventDefault(); // Evita la recarga
+
+        const formData = new FormData(this);
+
+        fetch('php/guardar_pago.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            // Limpiamos la respuesta de espacios en blanco
+            if (data.trim() === "exito") {
+                ventana.showModal(); // Abrimos el modal solo si el PHP responde "exito"
+            } else {
+                console.error("Respuesta del servidor:", data);
+                alert("Error al guardar: " + data);
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    });
+</script>
+
+</body>
+</html>
